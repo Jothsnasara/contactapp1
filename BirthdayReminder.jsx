@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -21,13 +18,11 @@ const BirthdayReminder = () => {
   const [searchName, setSearchName] = useState('');
   const navigate = useNavigate();
 
-  // 🧠 Fetch data from localStorage when component mounts
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('birthdays')) || [];
     setBirthdayData(data);
   }, []);
 
-  // 🔍 Filter logic
   const filteredData = birthdayData.filter(entry => {
     const matchesDate = searchDate ? entry.date === searchDate : true;
     const matchesName = searchName
@@ -63,7 +58,6 @@ const BirthdayReminder = () => {
           𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 𝑹𝒆𝒎𝒊𝒏𝒅𝒆𝒓🗓️
         </Typography>
 
-        {/* Search Inputs */}
         <input
           type="text"
           placeholder="Search by name"
@@ -92,7 +86,6 @@ const BirthdayReminder = () => {
           }}
         />
 
-        {/* Birthday Cards */}
         <Grid container spacing={4} justifyContent="center">
           {filteredData.length > 0 ? (
             filteredData.map((entry, index) => (
