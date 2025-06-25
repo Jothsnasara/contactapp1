@@ -39,9 +39,6 @@ const NavBar = () => {
                 </Link>
 
                  </Box>
-    
-
-                
             </Toolbar>
         </AppBar>
         <br></br>
