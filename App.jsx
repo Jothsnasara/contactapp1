@@ -9,8 +9,10 @@ import Signup from './components/Signup'
 import Aboutus from './components/Aboutus'
 import View from './components/view'
 import NavBar from './components/Navbar'
-import BirthdayReminder from './components/BirthdayReminder'
+
 import Message from './components/Message'
+import BirthdayReminder from './components/Birthdayreminder'
+import Contact from './components/Contacts'
 
 
   function App() {
@@ -28,8 +30,8 @@ import Message from './components/Message'
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Signup' element={<Signup/>}/>
           <Route path='/Add' element={<Add addBirthday={addBirthday} />} />
-
-          <Route path='/View' element={<View/>}/>
+          <Route path="/" element={<Add />} />
+          <Route path="/View" element={<Contact />} />
           <Route path='/Ab' element={<Aboutus/>}/>
           <Route path="/Birthdays" element={<BirthdayReminder birthdayData={birthdayData} />} />
           <Route path="/Message" element={<Message />} />
