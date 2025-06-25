@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Box,
@@ -28,7 +27,7 @@ const habits = ["Reading", "Traveling", "Gaming", "Cooking", "Sports"];
 const socialPlatforms = ["Facebook", "Twitter", "LinkedIn", "Instagram"];
 
 const Add = () => {
-  const navigate = useNavigate(); // kept but unused
+  const navigate = useNavigate(); 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -80,7 +79,6 @@ const Add = () => {
     }
   };
 
-  // ✅ REPLACED: Save to localStorage, no navigation
   const handleSubmit = (e) => {
     e.preventDefault();
 
